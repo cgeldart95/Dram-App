@@ -10,7 +10,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  min-height: 100%;
+  min-height: 100vh;
+  background-color: antiquewhite;
 }
 /* Add these rules to force background color everywhere */
 html {
@@ -20,7 +21,7 @@ html {
 main,
 section,
 div {
-  background-color: inherit;
+  background-color: antiquewhite;
 }
 
 .homepage-container {
@@ -41,6 +42,9 @@ main {
   padding-top: calc(
     12vh + 3.5rem
   ); /* header + results heading */
+  width: 100%;
+  min-height: 100vh;
+  background-color: antiquewhite;
 }
 
 .view {
@@ -304,13 +308,14 @@ header {
 .search-results-view {
   display: flex;
   align-items: flex-start;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   gap: 2rem;
   min-height: 100vh;
   position: relative;
+  width: 100%;
   background-color: antiquewhite;
+  /* max-width: 1200px; */
 }
 
 /* Sidebar - position it relative to the centered container */
