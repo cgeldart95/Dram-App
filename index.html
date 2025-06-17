@@ -6,22 +6,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/desktop.css" rel="stylesheet" />
     <title>Dram App</title>
   </head>
   <body>
     <header>
       <div class="header-container">        
-        <div class="logo-container"> 
-        <!-- <h1 class="logo">DRAM</h1> -->
-        
-        <!-- <img src="img/Dram logo -1.png"class="logo-img" id="logo-img"> -->
-        <img src="img/Dram logo-3.png"class="logo-img" id="logo-img">
-        <!-- <img src="img/Dram logo-2.png"class="logo-img" id="logo-img"> -->
-        <!-- <img src="img/Dram logo-4.png"class="logo-img" id="logo-img"> -->
-        <!-- <img src="img/Dram logo-6.png"class="logo-img" id="logo-img"> -->
-        <!-- <img src="img/Dram logo-5.png"class="logo-img" id="logo-img"> -->
-  </div>
+        <div class="logo-container">         
+          <img src="img/Dram logo-3.png"class="logo-img" id="logo-img">
+        </div>
         <div class="search-bar-wrapper">
           <div class="search-bar-container">
             <input
@@ -44,7 +37,7 @@
                   href="#"
                   class="nav__link"
                   data-view="review"
-                  >Review</a
+                  >Diary</a
                 >
               </li>
               <li>
@@ -68,35 +61,60 @@
     </header>
 
     <!-- Views Container -->
-    <main>
-      <!--///////////////////////////////////////////// Home View -->
-      <section id="home" class="homepage-View hidden">
-        <div class="home-paragraph">
-          <p class="welcome">
-            Keep track of your open and sealed bottles
-            with Stash
-          </p>
-          <p class="welcome">
-            The Dram Diary allows you to log your
-            newest tasting notes, or look back at your
-            previous tasting notes.
-          </p>
-          <p class="welcome">
-            Keep track of your open and sealed bottles
-            with Stash
+    <!--///////////////////////////////////////////// Home View -->
+  <main>
+  <section id="home" class="homepage-container">
+    <div class="home-paragraph">
+
+      <!-- Pair 1 -->
+      <div class="content-row">
+        <div class="home-paragraph-1">
+          <p class="welcome-text">
+            Keep track of your open and sealed bottles with Stash
           </p>
         </div>
-        <!-- Optional: Featured whiskies or content -->
-        <div class="featured-content">
-          <!-- Your featured items here -->
+        <div class="container-homepage-image1">
+          <img src="img/Dram Whisky Bottle.png" class="welcome-img1" />
         </div>
-      </section>
+      </div>
+
+      <!-- Pair 2 -->
+      <div class="content-row">
+        <div class="container-homepage-image2">
+          <img src="img/Glass_2 2.png" class="welcome-img2" />
+        </div>
+        <div class="home-paragraph-2">
+          <p class="welcome-text">
+            The Dram Diary allows you to log your newest tasting notes, or look back at your previous tasting notes.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pair 3 -->
+      <div class="content-row">
+        <div class="home-paragraph-3">
+          <p class="welcome-text">
+            Find your next purchase with wishlist
+          </p>
+        </div>
+        <div class="container-homepage-image3">
+          <img src="img/Barrel.png" class="welcome-img3" />
+        </div>
+      </div>
+
+    </div>
+
+    <div class="featured-content">
+      <!-- Your featured items here -->
+    </div>
+  </section>
+</main>
 
       <!-- ////////////////////////////////////////   Search Results View -->
 
       <!--//////////////  Filters / Sidebar View //////////////-->
    <!-- Search Results View -->
-  <div class="search-results-view">
+  <div class="search-results-view hidden">
     
     <!-- Results Container -->
     <div class="results-container">
@@ -159,7 +177,7 @@
   </div>
 
 
-        <img src="img/Barrel.png" />
+      
         <!-- Whisky Detail View -->
         <section
           id="whisky-detail"
@@ -204,8 +222,6 @@
       src="/js/controller.js"
       defer
     ></script>
-    <footer>
-      <p>&copy; 2025 Dram App. All rights reserved.</p>
-    </footer>
+    <footer> <p>&copy; 2025 Dram App. All rights reserved.</p> </footer>
   </body>
 </html>

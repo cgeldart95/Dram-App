@@ -1,0 +1,209 @@
+@media (max-width: 1000px) {
+  .header-container {
+    height: calc(12vh * 0.8); /* 20% smaller */
+    padding: 0 1.6rem; /* 20% less than 2rem */
+  }
+
+  main {
+    padding-top: calc(12vh * 0.8);
+  }
+
+  #logo-img {
+    width: calc(190px * 0.8); /* 152px */
+    height: calc(100px * 0.8); /* 80px */
+  }
+
+  .nav__list {
+    gap: calc(2rem * 0.8); /* 1.6rem */
+    margin-top: calc(1.4rem * 0.8); /* 1.12rem */
+  }
+
+  .nav__link {
+    font-size: calc(1.4rem * 0.8); /* 1.12rem */
+  }
+
+  .search-bar-container {
+    height: calc(3rem * 0.8); /* 2.4rem */
+    max-width: calc(400px * 0.8); /* 320px */
+    margin-left: calc(1rem * 0.8); /* 0.8rem */
+    margin-top: calc(0.57rem * 0.8); /* ~0.46rem */
+  }
+
+  #search-input {
+    font-size: calc(1.1rem * 0.8); /* 0.88rem */
+  }
+
+  .login-button {
+    font-size: calc(1.1rem * 0.8); /* 0.88rem */
+    padding: calc(0.5rem * 0.8) calc(1rem * 0.8); /* 0.4rem 0.8rem */
+    min-width: calc(120px * 0.8); /* 96px */
+    min-height: calc(50px * 0.8); /* 40px */
+  }
+
+  .filters-sidebar {
+    top: calc(12vh * 0.8);
+    max-height: calc(100vh - (12vh * 0.8) - 2rem);
+  }
+
+  #results-heading {
+    top: calc(12vh * 0.8);
+  }
+}
+@media (max-width: 1240px) {
+  .filters-sidebar {
+    right: 0.2rem; /* Fall back to edge positioning on smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .search-results-view {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .filters-sidebar {
+    position: relative;
+    top: auto;
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+    border-radius: 0;
+  }
+}
+@media (max-width: 768px) {
+  .search-results-view {
+    flex-direction: column;
+    padding: 1rem;
+    max-width: none;
+  }
+
+  .filters-sidebar {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+    border-radius: 0;
+    order: 1;
+  }
+
+  .results-container {
+    order: 2;
+    width: 100%;
+  }
+
+  #results-heading {
+    position: relative;
+    top: auto;
+  }
+}
+@media (max-width: 800px) {
+  .header-container {
+    height: calc(12vh * 0.64); /* 36% smaller */
+    padding: 0 1.28rem; /* 0.64 × 2rem */
+  }
+
+  main {
+    padding-top: calc(12vh * 0.64);
+  }
+
+  #logo-img {
+    width: calc(190px * 0.64); /* ~121.6px */
+    height: calc(100px * 0.64); /* 64px */
+  }
+
+  .nav__list {
+    gap: calc(2rem * 0.64); /* ~1.28rem */
+    margin-top: calc(1.4rem * 0.64); /* ~0.896rem */
+  }
+
+  .nav__link {
+    font-size: calc(1.4rem * 0.64); /* ~0.896rem */
+  }
+
+  .search-bar-container {
+    height: calc(3rem * 0.64); /* ~1.92rem */
+    max-width: calc(400px * 0.64); /* 256px */
+    margin-left: calc(1rem * 0.64); /* ~0.64rem */
+    margin-top: calc(0.57rem * 0.64); /* ~0.36rem */
+  }
+
+  #search-input {
+    font-size: calc(1.1rem * 0.64); /* ~0.704rem */
+  }
+
+  .login-button {
+    font-size: calc(1.1rem * 0.64); /* ~0.704rem */
+    padding: calc(0.5rem * 0.64) calc(1rem * 0.64); /* ~0.32rem 0.64rem */
+    min-width: calc(120px * 0.64); /* ~76.8px */
+    min-height: calc(50px * 0.64); /* ~32px */
+  }
+
+  .filters-sidebar {
+    top: calc(12vh * 0.64);
+    max-height: calc(100vh - (12vh * 0.64) - 2rem);
+  }
+
+  #results-heading {
+    top: calc(12vh * 0.64);
+  }
+}
+
+@media (max-width: 800px) {
+  /* REMOVED: transform scale rules */
+
+  .search-results-view {
+    flex-direction: column;
+    padding: 1rem;
+    max-width: none;
+  }
+
+  .filters-sidebar {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+    border-radius: 0;
+    order: 1;
+  }
+
+  .results-container {
+    order: 2;
+    width: 100%;
+  }
+
+  #results-heading {
+    position: sticky; /* Keep sticky on mobile */
+    top: calc(
+      12vh * 0.64
+    ); /* Match your header scaling */
+    font-size: calc(1.1rem * 0.8);
+    padding: calc(1rem * 0.8);
+  }
+
+  .results-list {
+    padding: calc(1rem * 0.8);
+  }
+}
+
+@media (max-width: 1000px) {
+  /* REMOVED: transform scale rules */
+
+  #results-heading {
+    top: calc(
+      12vh * 0.8
+    ); /* Match your header scaling */
+    font-size: calc(1.1rem * 0.9);
+    padding: calc(1rem * 0.9);
+  }
+
+  .results-container {
+    width: 75%;
+  }
+
+  .results-list {
+    padding: calc(1rem * 0.9);
+  }
+}
