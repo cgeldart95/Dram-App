@@ -1,0 +1,629 @@
+{
+  "metadata": {
+    "title": "Active Scottish Whisky Distilleries",
+    "description": "Complete list of Scottish whisky distilleries active in the last 30 years",
+    "last_updated": "2024-2025",
+    "total_distilleries": 151,
+    "data_source": "Scotch Whisky Association & Industry Reports"
+  },
+  "distilleries": [
+    {
+      "name": "Aberargie",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Aberfeldy",
+      "region": "Highlands"
+    },
+    {
+      "name": "Aberlour",
+      "region": "Speyside"
+    },
+    {
+      "name": "Abhainn Dearg",
+      "region": "Islands"
+    },
+    {
+      "name": "Ailsa Bay",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Allt-a-Bhainne",
+      "region": "Speyside"
+    },
+    {
+      "name": "Annandale",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Arbikie",
+      "region": "Highlands"
+    },
+    {
+      "name": "Ardbeg",
+      "region": "Islay"
+    },
+    {
+      "name": "Ardmore",
+      "region": "Highlands"
+    },
+    {
+      "name": "Ardnahoe",
+      "region": "Islay"
+    },
+    {
+      "name": "Ardnamurchan",
+      "region": "Highlands"
+    },
+    {
+      "name": "Ardross",
+      "region": "Highlands"
+    },
+    {
+      "name": "Auchentoshan",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Auchroisk",
+      "region": "Speyside"
+    },
+    {
+      "name": "Aultmore",
+      "region": "Speyside"
+    },
+    {
+      "name": "Balblair",
+      "region": "Highlands"
+    },
+    {
+      "name": "Balindalloch",
+      "region": "Speyside"
+    },
+    {
+      "name": "Balmenach",
+      "region": "Speyside"
+    },
+    {
+      "name": "Balvenie",
+      "region": "Speyside"
+    },
+    {
+      "name": "Ben Nevis",
+      "region": "Highlands"
+    },
+    {
+      "name": "Benriach",
+      "region": "Speyside"
+    },
+    {
+      "name": "Benrinnes",
+      "region": "Speyside"
+    },
+    {
+      "name": "Benromach",
+      "region": "Speyside"
+    },
+    {
+      "name": "Blair Athol",
+      "region": "Speyside"
+    },
+    {
+      "name": "Bladnoch",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Bonnington",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Bowmore",
+      "region": "Islay"
+    },
+    {
+      "name": "Braeval",
+      "region": "Speyside"
+    },
+    {
+      "name": "BrewDog",
+      "region": "Highlands"
+    },
+    {
+      "name": "Brora",
+      "region": "Highlands"
+    },
+    {
+      "name": "Bruichladdich",
+      "region": "Islay"
+    },
+    {
+      "name": "Bunnahabhain",
+      "region": "Islay"
+    },
+    {
+      "name": "Burnobennie",
+      "region": "Highlands"
+    },
+    {
+      "name": "Cameronbridge",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Caol Ila",
+      "region": "Islay"
+    },
+    {
+      "name": "Cardhu",
+      "region": "Speyside"
+    },
+    {
+      "name": "Clynelish",
+      "region": "Highlands"
+    },
+    {
+      "name": "Craigellachie",
+      "region": "Speyside"
+    },
+    {
+      "name": "Cragganmore",
+      "region": "Speyside"
+    },
+    {
+      "name": "Daftmill",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Dailuaine",
+      "region": "Speyside"
+    },
+    {
+      "name": "Dalmore",
+      "region": "Highlands"
+    },
+    {
+      "name": "Dalmunach",
+      "region": "Speyside"
+    },
+    {
+      "name": "Dalwhinnie",
+      "region": "Highlands"
+    },
+    {
+      "name": "Deanston",
+      "region": "Highlands"
+    },
+    {
+      "name": "Dornoch",
+      "region": "Highlands"
+    },
+    {
+      "name": "Dufftown",
+      "region": "Speyside"
+    },
+    {
+      "name": "Dunphail",
+      "region": "Speyside"
+    },
+    {
+      "name": "Eden Mill",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Edradour",
+      "region": "Highlands"
+    },
+    {
+      "name": "8 Doors",
+      "region": "Highlands"
+    },
+    {
+      "name": "Falkirk",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Fettercairn",
+      "region": "Highlands"
+    },
+    {
+      "name": "Girvan",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Glasgow",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Glen Elgin",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glen Garioch",
+      "region": "Highlands"
+    },
+    {
+      "name": "Glen Grant",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glen Keith",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glen Moray",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glen Ord",
+      "region": "Highlands"
+    },
+    {
+      "name": "Glen Scotia",
+      "region": "Campbeltown"
+    },
+    {
+      "name": "Glen Spey",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glenallachie",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glenburgie",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glencadam",
+      "region": "Highlands"
+    },
+    {
+      "name": "The Clydeside",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Glendronach",
+      "region": "Highlands"
+    },
+    {
+      "name": "Glendullan",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glenfarclas",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glenfiddich",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glenglassaugh",
+      "region": "Highlands"
+    },
+    {
+      "name": "Glengoyne",
+      "region": "Highlands"
+    },
+    {
+      "name": "Glenkinchie",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Glengyle",
+      "region": "Campbeltown"
+    },
+    {
+      "name": "Glenlivet",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glenlossie",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glenmorangie",
+      "region": "Highlands"
+    },
+    {
+      "name": "Glenrothes",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glentauchers",
+      "region": "Speyside"
+    },
+    {
+      "name": "Glenturret",
+      "region": "Highlands"
+    },
+    {
+      "name": "GlenWyvis",
+      "region": "Highlands"
+    },
+    {
+      "name": "Highland Park",
+      "region": "Islands"
+    },
+    {
+      "name": "Holyrood",
+      "region": "Lowlands"
+    },
+    {
+      "name": "InchDairnie",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Inchgower",
+      "region": "Speyside"
+    },
+    {
+      "name": "Invergordon",
+      "region": "Highlands"
+    },
+    {
+      "name": "Isle of Harris",
+      "region": "Islands"
+    },
+    {
+      "name": "Isle of Raasay",
+      "region": "Islands"
+    },
+    {
+      "name": "Jackton",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Jura",
+      "region": "Islands"
+    },
+    {
+      "name": "Kilchoman",
+      "region": "Islay"
+    },
+    {
+      "name": "Kininvie",
+      "region": "Speyside"
+    },
+    {
+      "name": "Kingsbarns",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Knockando",
+      "region": "Speyside"
+    },
+    {
+      "name": "Knockdhu",
+      "region": "Highlands"
+    },
+    {
+      "name": "Lagg",
+      "region": "Islands"
+    },
+    {
+      "name": "Lagavulin",
+      "region": "Islay"
+    },
+    {
+      "name": "Laphroaig",
+      "region": "Islay"
+    },
+    {
+      "name": "Lindores Abbey",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Linkwood",
+      "region": "Speyside"
+    },
+    {
+      "name": "Loch Lomond",
+      "region": "Highlands"
+    },
+    {
+      "name": "Lochlea",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Lochranza",
+      "region": "Islands"
+    },
+    {
+      "name": "Longmorn",
+      "region": "Speyside"
+    },
+    {
+      "name": "Macduff",
+      "region": "Highlands"
+    },
+    {
+      "name": "Macallan",
+      "region": "Speyside"
+    },
+    {
+      "name": "Mannochmore",
+      "region": "Speyside"
+    },
+    {
+      "name": "Miltonduff",
+      "region": "Speyside"
+    },
+    {
+      "name": "Moffat",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Mortlach",
+      "region": "Speyside"
+    },
+    {
+      "name": "Nc'Nean",
+      "region": "Highlands"
+    },
+    {
+      "name": "North British",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Oban",
+      "region": "Highlands"
+    },
+    {
+      "name": "Port Ellen",
+      "region": "Islay"
+    },
+    {
+      "name": "Port of Leith",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Pulteney",
+      "region": "Highlands"
+    },
+    {
+      "name": "Reivers",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Rosebank",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Roseisle",
+      "region": "Speyside"
+    },
+    {
+      "name": "Royal Brackla",
+      "region": "Highlands"
+    },
+    {
+      "name": "Royal Lochnagar",
+      "region": "Highlands"
+    },
+    {
+      "name": "Scapa",
+      "region": "Islands"
+    },
+    {
+      "name": "Speyside",
+      "region": "Speyside"
+    },
+    {
+      "name": "Speyburn",
+      "region": "Speyside"
+    },
+    {
+      "name": "Springbank",
+      "region": "Campbeltown"
+    },
+    {
+      "name": "Starlaw",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Stirling",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Strathearn",
+      "region": "Highlands"
+    },
+    {
+      "name": "Strathclyde",
+      "region": "Lowlands"
+    },
+    {
+      "name": "Strathisla",
+      "region": "Speyside"
+    },
+    {
+      "name": "Strathmill",
+      "region": "Speyside"
+    },
+    {
+      "name": "Talisker",
+      "region": "Islands"
+    },
+    {
+      "name": "Tamdhu",
+      "region": "Speyside"
+    },
+    {
+      "name": "Tamnavulin",
+      "region": "Speyside"
+    },
+    {
+      "name": "Teaninich",
+      "region": "Highlands"
+    },
+    {
+      "name": "The Borders",
+      "region": "Lowlands"
+    },
+    {
+      "name": "The Cairn",
+      "region": "Speyside"
+    },
+    {
+      "name": "Tobermory",
+      "region": "Islands"
+    },
+    {
+      "name": "Tomatin",
+      "region": "Highlands"
+    },
+    {
+      "name": "Tomintoul",
+      "region": "Speyside"
+    },
+    {
+      "name": "Torabhaig",
+      "region": "Islands"
+    },
+    {
+      "name": "Tormore",
+      "region": "Speyside"
+    },
+    {
+      "name": "Toulvaddie",
+      "region": "Highlands"
+    },
+    {
+      "name": "Tullibardine",
+      "region": "Highlands"
+    },
+    {
+      "name": "Uile-bheist",
+      "region": "Highlands"
+    },
+    {
+      "name": "Wolfburn",
+      "region": "Highlands"
+    }
+  ],
+  "regions": {
+    "Speyside": {
+      "description": "The largest whisky region in Scotland with the most distilleries",
+      "count": 48
+    },
+    "Highlands": {
+      "description": "The largest geographical region covering most of Scotland",
+      "count": 41
+    },
+    "Lowlands": {
+      "description": "Southern Scotland, known for gentle, approachable whiskies",
+      "count": 26
+    },
+    "Islands": {
+      "description": "Island distilleries including Skye, Orkney, Arran, Jura, and others",
+      "count": 12
+    },
+    "Islay": {
+      "description": "Small island famous for peated, smoky whiskies",
+      "count": 11
+    },
+    "Campbeltown": {
+      "description": "Once the whisky capital of the world, now home to three distilleries",
+      "count": 3
+    }
+  }
+}

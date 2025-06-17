@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+}
+
+main {
+  flex: 1;
+  padding-top: 12vh; /* This is CRUCIAL for fixed header */
+  flex: 1;
+}
+.view {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0 auto;
+  /* min-height: 100vh; */ /* remove this line */
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+/*/////////////////////////////// The Header /Nav Bar View */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: antiquewhite;
+  width: 100%;
+  
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 12vh;
+
+  flex-wrap: nowrap; /* prevent wrapping on large screens */
+  gap: 1rem;
+  width: 100%;
+}
+
+
+
+
+
+#logo-img {
+  width: 190px;
+  height: 100px; /* keeps aspect ratio */
+}
+.nav-center {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 1rem; /* 👈 You can tweak this value */
+}
+
+.nav__list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 1.4rem;
+}
+
+.nav__link {
+  color: brown;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: 'Space Grotesk', sans-serif;
+  /* margin-left: 1rem; */
+}
+
+.log-in {
+  margin-left: auto; /* 👈 this is the magic that pushes it right */
+  display: flex;
+  align-items: center;
+  /* padding-right: 1rem; */
+  margin-right: 0%;
+}
+
+.login-button {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  color: antiquewhite;
+  background-color: brown;
+  border: 3px solid brown;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 120px; /* Optional: enforce a minimum width */
+  min-height: 50px;
+}
+
+
+
+.login-button:hover {
+  background-color: brown;
+  color: antiquewhite;
+}
+
+@media (max-width: 1000px) {
+  .header-container {
+    height: calc(12vh * 0.8); /* 20% smaller */
+    padding: 0 1.6rem; /* 20% less than 2rem */
+  }
+
+  main {
+    padding-top: calc(12vh * 0.8);
+  }
+
+  #logo-img {
+    width: calc(190px * 0.8); /* 152px */
+    height: calc(100px * 0.8); /* 80px */
+  }
+
+  .nav__list {
+    gap: calc(2rem * 0.8); /* 1.6rem */
+    margin-top: calc(1.4rem * 0.8); /* 1.12rem */
+  }
+
+  .nav__link {
+    font-size: calc(1.4rem * 0.8); /* 1.12rem */
+  }
+
+  .search-bar-container {
+    height: calc(3rem * 0.8); /* 2.4rem */
+    max-width: calc(400px * 0.8); /* 320px */
+    margin-left: calc(1rem * 0.8); /* 0.8rem */
+    margin-top: calc(0.57rem * 0.8); /* ~0.46rem */
+  }
+
+  #search-input {
+    font-size: calc(1.1rem * 0.8); /* 0.88rem */
+  }
+
+  .login-button {
+    font-size: calc(1.1rem * 0.8); /* 0.88rem */
+    padding: calc(0.5rem * 0.8) calc(1rem * 0.8); /* 0.4rem 0.8rem */
+    min-width: calc(120px * 0.8); /* 96px */
+    min-height: calc(50px * 0.8); /* 40px */
+  }
+
+  .filters-sidebar {
+    top: calc(12vh * 0.8);
+    max-height: calc(100vh - (12vh * 0.8) - 2rem);
+  }
+
+  #results-heading {
+    top: calc(12vh * 0.8);
+  }
+}
+
+@media (max-width: 800px) {
+  .header-container {
+    height: calc(12vh * 0.64); /* 36% smaller */
+    padding: 0 1.28rem; /* 0.64 × 2rem */
+  }
+
+  main {
+    padding-top: calc(12vh * 0.64);
+  }
+
+  #logo-img {
+    width: calc(190px * 0.64); /* ~121.6px */
+    height: calc(100px * 0.64); /* 64px */
+  }
+
+  .nav__list {
+    gap: calc(2rem * 0.64); /* ~1.28rem */
+    margin-top: calc(1.4rem * 0.64); /* ~0.896rem */
+  }
+
+  .nav__link {
+    font-size: calc(1.4rem * 0.64); /* ~0.896rem */
+  }
+
+  .search-bar-container {
+    height: calc(3rem * 0.64); /* ~1.92rem */
+    max-width: calc(400px * 0.64); /* 256px */
+    margin-left: calc(1rem * 0.64); /* ~0.64rem */
+    margin-top: calc(0.57rem * 0.64); /* ~0.36rem */
+  }
+
+  #search-input {
+    font-size: calc(1.1rem * 0.64); /* ~0.704rem */
+  }
+
+  .login-button {
+    font-size: calc(1.1rem * 0.64); /* ~0.704rem */
+    padding: calc(0.5rem * 0.64) calc(1rem * 0.64); /* ~0.32rem 0.64rem */
+    min-width: calc(120px * 0.64); /* ~76.8px */
+    min-height: calc(50px * 0.64); /* ~32px */
+  }
+
+  .filters-sidebar {
+    top: calc(12vh * 0.64);
+    max-height: calc(100vh - (12vh * 0.64) - 2rem);
+  }
+
+  #results-heading {
+    top: calc(12vh * 0.64);
+  }
+}
+
+/*///////////////////////////////////// Search Bar Input */
+.search-bar-wrapper {
+  flex: 1 1 30%; /* instead of 100% */
+  display: flex;
+  /* justify-content: center; */
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 0.4rem;
+  border: 3px solid brown;
+  border-radius: 1rem;
+  background-color: antiquewhite;
+  margin-left: 1rem;
+  margin-top: 0.57rem;
+}
+
+/* .search-bar-container.hidden {
+  display: none;
+} */
+
+#search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: brown;
+  font-size: 1.1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  height: 100%;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+}
+/*/////////////////////////////// The Homepage View */
+.homepage-View {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1vh;
+  text-align: center;
+  /* background-color: brown; */
+  height: 30vh;
+}
+.homepage-View.hidden {
+  display: none;
+}
+
+.home-paragraph {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: 60px; /* slightly taller for breathing room */
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* centers vertically */
+  margin-bottom: 5vh;
+}
+
+.welcome {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1.5; /* makes sure text isn't squashed */
+  color: brown;
+  transform: translateX(-100%);
+  will-change: transform;
+  opacity: 0;
+}
+
+.welcome:nth-child(1) {
+  animation-delay: 0s;
+}
+.welcome:nth-child(2) {
+  animation-delay: 1s;
+}
+.welcome:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes fadeCycle {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  5% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  35% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*//////////////////////////////////////////////// The Search Results View */
+
+
+.search-results-view {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 18rem;
+  gap: 2rem;
+  min-height: 100vh;
+  align-items: stretch; /* Allows sticky to behave better */
+}
+
+@media (max-width: 768px) {
+  .search-results-view {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+/* ///////////////////////////////// Filter Sidebar */ 
+
+.search-results-view {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px; /* Same as header */
+  margin: 0 auto; /* Center it like header */
+  padding: 0 2rem; /* Same as header */
+  gap: 2rem;
+  min-height: 100vh;
+  align-items: stretch;
+  position: relative; /* Important for absolute positioning of children */
+}
+@media (max-width: 768px) {
+  .search-results-view {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .filters-sidebar {
+    position: relative;
+    top: auto;
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+    border-radius: 0;
+  }
+}
+/* Sidebar - position it relative to the centered container */
+.filters-sidebar {
+  position: fixed;
+  top: 12vh; /* Stick below header */
+  /* Calculate the right position based on the centered container */
+  right: calc(50% - 725px + 2rem); /* 50% - (max-width/2) + padding */
+  width: 15rem;
+  max-height: calc(100vh - 12vh - 2rem);
+  overflow-y: auto;
+  color: brown;
+  z-index: 1;
+  /* padding-left: 1rem; */
+}
+
+@media (max-width: 1240px) {
+  .filters-sidebar {
+    right: 0.2rem; /* Fall back to edge positioning on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .search-results-view {
+    flex-direction: column;
+    padding: 1rem;
+    max-width: none;
+  }
+
+  .filters-sidebar {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+    border-radius: 0;
+    order: 1;
+  }
+  
+  .results-container {
+    order: 2;
+    width: 100%;
+  }
+  
+  #results-heading {
+    position: relative;
+    top: auto;
+  }
+}
+.filters-sidebar div,
+.filters-sidebar select,
+.filters-sidebar button,
+.filters-sidebar p {
+  margin-top: 0.7rem;
+}
+.filters-sidebar button,
+.filters-sidebar select {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  color: brown;
+  background: none;
+  border: none;
+  /* padding: 0.2rem 0.23; */
+}
+
+#filter-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem; /* space BELOW the underline */
+  padding-bottom: 0.3rem; /* space BETWEEN text and underline */
+  border-bottom: 2px solid brown; /* thickness and color of underline */
+  display: inline-block; /* ensures border only spans text width */
+}
+
+#distillery-select {
+  padding: 0;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  appearance: none; /* Standard */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+}
+
+#bottling-container {
+  margin: 1rem auto 1rem auto;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#distillery-bottling-btn,
+#independent-bottling-btn {
+  display: block; /* each button takes full width and stacks */
+  margin-bottom: 1rem; /* optional spacing */
+  cursor: pointer;
+}
+
+
+#distillery-bottling-btn {
+  padding: 0;
+  margin-bottom: 0rem;
+  cursor: pointer;
+}
+#independent-bottling-btn {
+  border: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* //////// Malt Container */
+
+.malt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#single-malt-btn {
+  padding: 0;
+  margin-bottom: 0rem;
+  cursor: pointer;
+}
+
+#blended-malt-btn {
+  padding: 0;
+  margin-bottom: 0rem;
+  cursor: pointer;
+}
+#blend-btn {
+  padding: 0;
+  margin-bottom: 0rem;
+  cursor: pointer;
+}
+
+#grain-whisky-btn {
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  max-height: 800px;
+}
+/* ///////////////////////////////////// */
+
+#age-select {
+  padding: 0;
+  cursor: pointer;
+  appearance: none; /* Standard */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+  margin-bottom: 1rem;
+}
+
+/* ////////////////// Strength container */
+.strength-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#cask-strength-btn {
+  margin-bottom: 1rem;
+}
+
+#non-chill-filtered-btn {
+  margin-bottom: 0rem;
+}
+#natural-colour-btn {
+  margin-top: 0rem;
+}
+
+/* ////////////////  results container ///////// */
+
+/* Results container - keep it scrollable */
+.results-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid brown;
+  padding: 0;
+  border-radius: 1rem;
+  min-height: 200vh;
+  width: 70%; /* Adjust as needed */
+  box-sizing: border-box;
+}
+/* Keep results heading sticky within its container */
+#results-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1rem;
+  padding-bottom: 0rem;
+  border-bottom: 2px solid brown;
+  display: block;
+  color: brown;
+  text-align: center;
+  width: 100%;
+  position: sticky;
+  top: 12vh; /* Stick below header */
+  background-color: antiquewhite;
+  z-index: 10;
+  border-top-left-radius: calc(1rem - 2px);
+  border-top-right-radius: calc(1rem - 2px);
+  box-sizing: border-box;
+}
+.results-list {
+  list-style: none;
+  padding: 1rem;
+  margin-top: 0;
+  flex: 1;
+  /* Ensure this doesn't interfere with sticky positioning */
+  position: relative;
+}
+img {
+  width: 100%;
+  height: 130vh;
+}
+
+/* Default size */
+.sidebar-wrapper,
+.results-wrapper {
+  transform: scale(1);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+
+/* Shrink to 90% under 1000px */
+@media (max-width: 1000px) {
+  .sidebar-wrapper,
+  .results-wrapper {
+    transform: scale(0.9);
+  }
+}
+
+/* Shrink to 70% under 800px */
+@media (max-width: 800px) {
+  .sidebar-wrapper,
+  .results-wrapper {
+    transform: scale(0.7);
+  }
+}
+
+
+/* //////////////// *

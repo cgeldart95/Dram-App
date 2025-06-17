@@ -6,10 +6,206 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <link href="styles.css" rel="styles" />
+    <link href="/css/styles.css" rel="stylesheet" />
     <title>Dram App</title>
   </head>
   <body>
-    <h1>DRAM</h1>
+    <header>
+      <div class="header-container">        
+        <div class="logo-container"> 
+        <!-- <h1 class="logo">DRAM</h1> -->
+        
+        <!-- <img src="img/Dram logo -1.png"class="logo-img" id="logo-img"> -->
+        <img src="img/Dram logo-3.png"class="logo-img" id="logo-img">
+        <!-- <img src="img/Dram logo-2.png"class="logo-img" id="logo-img"> -->
+        <!-- <img src="img/Dram logo-4.png"class="logo-img" id="logo-img"> -->
+        <!-- <img src="img/Dram logo-6.png"class="logo-img" id="logo-img"> -->
+        <!-- <img src="img/Dram logo-5.png"class="logo-img" id="logo-img"> -->
+  </div>
+        <div class="search-bar-wrapper">
+          <div class="search-bar-container">
+            <input
+              id="search-input"
+              placeholder="Search whiskies, distilleries or bottlers..."
+            />
+          </div>
+          <div class="nav-center">
+            <ul class="nav__list">
+              <li>
+                <a
+                  href="#"
+                  class="nav__link stash"
+                  data-view="stash"
+                  >Stash</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav__link"
+                  data-view="review"
+                  >Review</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav__link"
+                  data-view="wishlist"
+                  >Wishlist</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="log-in">
+            <button class="login-button">Login</button>
+          </div>
+
+          <!-- Search bar included within header -->
+        </div>
+      </div>
+    </header>
+
+    <!-- Views Container -->
+    <main>
+      <!--///////////////////////////////////////////// Home View -->
+      <section id="home" class="homepage-View hidden">
+        <div class="home-paragraph">
+          <p class="welcome">
+            Keep track of your open and sealed bottles
+            with Stash
+          </p>
+          <p class="welcome">
+            The Dram Diary allows you to log your
+            newest tasting notes, or look back at your
+            previous tasting notes.
+          </p>
+          <p class="welcome">
+            Keep track of your open and sealed bottles
+            with Stash
+          </p>
+        </div>
+        <!-- Optional: Featured whiskies or content -->
+        <div class="featured-content">
+          <!-- Your featured items here -->
+        </div>
+      </section>
+
+      <!-- ////////////////////////////////////////   Search Results View -->
+
+      <!--//////////////  Filters / Sidebar View //////////////-->
+   <!-- Search Results View -->
+  <div class="search-results-view">
+    
+    <!-- Results Container -->
+    <div class="results-container">
+      <aside class="sidebar-wrapper"> 
+      <p id="results-heading">Results for "Whisky"</p>
+      </aside>
+      <aside class="results-wrapper"> 
+      <ul class="results-list"></ul>
+      </aside>
+    </div>
+
+    <!-- ///////////////// -->
+    <!-- Sidebar Filters -->
+    <div
+      class="filters-sidebar"
+      aria-label="Product Filters"
+    >
+      <p class="filter-title" id="filter-title">Filter Results</p>
+      <div class="distillery-container">
+        <select id="distillery-select" name="distillery">
+          <option value="">Distillery</option>
+          <option value="ardbeg">Ardbeg</option>
+          <option value="lagavulin">Lagavulin</option>
+          <option value="macallan">Macallan</option>
+          <!-- more options -->
+        </select>
+      </div>
+      <div class="bottling-container">
+        <button id="distillery-bottling-btn">Distillery Bottling</button>
+        <button id="independent-bottling-btn">Independent Bottling</button>
+      </div>
+      <div class="malt-container">
+        <button id="single-malt-btn">Single Malt</button>
+        <button id="blended-malt-btn">Blended Malt</button>
+        <button id="blend-btn">Blend</button>
+        <button id="grain-whisky-btn">Grain Whisky</button>
+      </div>
+      <div class="age-statement-container">
+        <select id="age-select" name="Age-Statement">
+          <option value="">Age Statement</option>
+          <option value="12">12</option>
+          <option value="15">15</option>
+          <option value="10">10</option>
+          <!-- more options -->
+        </select>
+      </div>
+      <div class="strength-container">
+        <button id="standard-strength-btn">Standard Strength</button>
+        <button id="integrity-strength-btn">Integrity Strength</button>
+        <button id="cask-strength-btn">Cask Strength</button>
+      </div>
+      <div class="non-chill-filtered-container">
+        <button id="non-chill-filtered-btn">Non-Chill-Filtered</button>
+      </div>
+      <div class="natural-colour-container">
+        <button id="natural-colour-btn">Natural Colour</button>
+      </div>
+    </div>
+
+  </div>
+
+
+        <img src="img/Barrel.png" />
+        <!-- Whisky Detail View -->
+        <section
+          id="whisky-detail"
+          class="whisky-view hidden"
+        >
+          <button id="back-to-results">
+            ← Back to Results
+          </button>
+          <h2 id="whisky-name">Whisky Name</h2>
+          <div id="whisky-info">
+            <!-- Detailed whisky info populated here -->
+          </div>
+          <button id="add-wishlist">
+            Add to Wishlist
+          </button>
+          <button id="add-collection">
+            Add to Collection
+          </button>
+        </div>
+     
+      <!-- Wishlist View -->
+      <section id="wishlist" class="view hidden">
+        <h2>Your Wishlist</h2>
+        <!-- List of whiskies user saved -->
+      </section>
+
+      <!-- Account View -->
+      <section
+        id="account"
+        class="account-view hidden"
+      >
+        <h2>Your Account</h2>
+        <!-- User info, collections, reviews -->
+      </section>
+      <!-- Log in View -->
+      <section class="login-View hidden">
+        <div></div>
+      </section>
+    </main>
+    <script
+      type="module"
+      src="/js/controller.js"
+      defer
+    ></script>
   </body>
+  <footer>
+    <p>&copy; 2025 Dram App. All rights reserved.</p>
+  </footer>
 </html>
