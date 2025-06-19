@@ -12,6 +12,16 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   color: brown;
 }
+body {
+  width: 100vw; /* Force full viewport width */
+  overflow-x: hidden; /* Prevent unwanted horizontal scroll */
+  background-color: antiquewhite;
+}
+
+html {
+  width: 100vw;
+}
+
 .page-wrapper {
   display: flex;
   flex-direction: column;
