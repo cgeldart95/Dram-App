@@ -9,43 +9,30 @@
     <link href="css/desktop.css" rel="stylesheet" />
     <title>Dram App</title>
   </head>
+
+  <!-- ////////////////////////////////////////// -->
   <body>
-    <header>
-      <div class="header-container">        
-        <div class="logo-container">         
-          <img src="img/dram-logo-3.png" class="logo-img" id="logo-img">        </div>
-        <div class="search-bar-wrapper">
-          <div class="search-bar-container">
-            <input
-              id="search-input"
-              placeholder="Search whiskies, distilleries or bottlers..."
-            />
+    <div class="page-wrapper">  
+        <header>
+          <div class="header-container">
+           <div class="logo-container">       
+            <a href="https://dramreviewsite.netlify.app/" class="nav__link homepage" data-view="homepage">
+              <img src="img/dram-logo-3.png" class="logo-img" id="logo-img">
+            </a>
           </div>
-          <div class="nav-center">
+           <div class="search-bar-container">
+          <input id="search-input" placeholder="Search whiskies, distilleries or bottlers..."/>
+        </div>
+          <div class="nav-container">
             <ul class="nav__list">
               <li>
-                <a
-                  href="#"
-                  class="nav__link stash"
-                  data-view="stash"
-                  >Stash</a
-                >
+                 <a href="#" class="nav__link" data-view="review">Diary</a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="nav__link"
-                  data-view="review"
-                  >Diary</a
-                >
+                <a href="#" class="nav__link stash" data-view="stash">Stash</a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="nav__link"
-                  data-view="wishlist"
-                  >Wishlist</a
-                >
+                <a href="#" class="nav__link" data-view="wishlist">Wishlist</a>
               </li>
             </ul>
           </div>
@@ -53,84 +40,67 @@
           <div class="log-in">
             <button class="login-button">Login</button>
           </div>
-
-          <!-- Search bar included within header -->
         </div>
-      </div>
+       
     </header>
 
-    <!-- Views Container -->
-    <!--///////////////////////////////////////////// Home View -->
-  <main>
-  <section id="home" class="homepage-container">
-    <div class="home-paragraph">
-
-      <!-- Pair 1 -->
-      <div class="content-row">
-        <div class="home-paragraph-1">
-          <p class="welcome-text">
-            Keep track of your open and sealed bottles with Stash
-          </p>
-        </div>
-        <div class="container-homepage-image1">
-          <img src="img/dram-whisky-bottle.png" class="welcome-img1" />
-        </div>
-      </div>
-
-      <!-- Pair 2 -->
-      <div class="content-row">
-        <div class="container-homepage-image2">
-          <img src="img/glass-2.png" class="welcome-img2" />
-        </div>
-        <div class="home-paragraph-2">
-          <p class="welcome-text">
-            The Dram Diary allows you to log your newest tasting notes, or look back at your previous tasting notes.
-          </p>
-        </div>
-      </div>
-
-      <!-- Pair 3 -->
-      <div class="content-row">
-        <div class="home-paragraph-3">
-          <p class="welcome-text">
-            Find your next purchase with wishlist
-          </p>
-        </div>
-        <div class="container-homepage-image3">
-          <img src="img/Barrel.png" class="welcome-img3" />
+<!--////////////// Sections are the views we will be toggling between //////////// -->
+    <main>
+      <!--///////////////////////////////////////////// Home View -->
+      <section id="home-view" class="view">
+        <div class="welcome-container">
+          <div class="content-row" id="welcome-row-1">
+             <div class="home-paragraph-1">
+              <p class="welcome-text"> The Diary allows you to log and look back at your tasting notes</p>
+            </div>
+            <div class="container-homepage-image1">
+              <img src="img/dram-whisky-bottle.png" class="welcome-img1" />
+            </div>
+          </div>
+          
+          <div class="content-row" id="welcome-row-2">
+            <div class="container-homepage-image2">
+              <img src="img/glass-2.png" class="welcome-img2" />
+            </div>
+               <div class="home-paragraph-2">
+              <p class="welcome-text"> Keep track of your open and sealed bottles with Stash</p>
+            </div>
+           
+          </div>
+          
+          <div class="content-row" id="welcome-row-3">
+            <div class="home-paragraph-3">
+              <p class="welcome-text"> Find your next purchase with wishlist</p>
+            </div>
+            <div class="container-homepage-image3">
+              <img src="img/Barrel.png" class="welcome-img3" />
+            </div>
+          </div>
         </div>
       </div>
-
-    </div>
-
-    <div class="featured-content">
-      <!-- Your featured items here -->
-    </div>
+      
+      <div class="homepage-content-container"></div>
+      
   </section>
-</main>
 
-      <!-- ////////////////////////////////////////   Search Results View -->
 
-      <!--//////////////  Filters / Sidebar View //////////////-->
+<!-- ////////////////////////////////////////   Search Results View -->
    <!-- Search Results View -->
-  <div class="search-results-view hidden">
+  <section class="search-results-view view hidden">
     
     <!-- Results Container -->
     <div class="results-container">
       <aside class="sidebar-wrapper"> 
-      <p id="results-heading">Results for "Whisky"</p>
+        <p id="results-heading">Results for "Whisky"</p>
       </aside>
       <aside class="results-wrapper"> 
-      <ul class="results-list"></ul>
+        <ul class="results-list"></ul>
       </aside>
     </div>
 
     <!-- ///////////////// -->
     <!-- Sidebar Filters -->
-    <div
-      class="filters-sidebar"
-      aria-label="Product Filters"
-    >
+    <div id="filters-sidebar" class="sidebar" aria-label="Product Filters">
       <p class="filter-title" id="filter-title">Filter Results</p>
       <div class="distillery-container">
         <select id="distillery-select" name="distillery">
@@ -173,13 +143,10 @@
       </div>
     </div>
 
-  </div>
-        <!-- Whisky Detail View -->
-        <section
-          id="whisky-detail"
-          class="whisky-view hidden"
-        >
-          <button id="back-to-results">
+  </section>
+  <!-- ///////////////////////////////////////////////////////////////// !-- Whisky Detail View --> 
+  <section id="whisky-detail" class="whisky-view hidden">
+    <button id="back-to-results">
             ← Back to Results
           </button>
           <h2 id="whisky-name">Whisky Name</h2>
@@ -215,5 +182,7 @@
     </main>
     <script type="module" src="js/controller.js" defer></script>
     <footer> <p>&copy; 2025 Dram App. All rights reserved.</p> </footer>
+    
+  </div>
   </body>
 </html>

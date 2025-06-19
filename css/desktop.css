@@ -7,21 +7,18 @@
 }
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
   min-height: 100vh;
   background-color: antiquewhite;
+  font-family: 'Space Grotesk', sans-serif;
+  color: brown;
 }
-/* Add these rules to force background color everywhere */
-html {
-  background-color: antiquewhite;
-}
-
-main,
-section,
-div {
-  background-color: antiquewhite;
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1200px; /* or whatever width you prefer */
+  margin: 0 auto; /* centers the container */
+  width: 100%; /* allows it to be responsive on smaller screens */
 }
 
 .homepage-container {
@@ -31,33 +28,21 @@ div {
 .search-results-view {
   background-color: antiquewhite !important;
 }
-body {
-  overflow-y: auto; /* instead of scroll */
-  margin: 0;
-  padding: 0;
-  background-color: antiquewhite;
-}
 
 main {
-  padding-top: calc(
-    12vh + 3.5rem
-  ); /* header + results heading */
   width: 100%;
   min-height: 100vh;
   background-color: antiquewhite;
 }
 
 .view {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  min-height: calc(100vh - 12vh - 4rem);
   padding: 2rem;
-  margin: 0 auto;
-  min-height: 100vh;
+  box-sizing: border-box;
 }
-main,
-.view {
-  padding-bottom: 4rem; /* ✅ Prevent footer overlap */
-}
+
 .hidden {
   display: none !important;
 }
@@ -84,80 +69,59 @@ footer {
   white-space: nowrap;
   border: 0;
 }
-/*/////////////////////////////// The Header /Nav Bar View */
+/*/////////////////////////////// The Header /Nav Bar View /////////////////////////////////*/
+
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 999;
   background-color: antiquewhite;
-  width: 100%;
+  /* Give it a height or let the child fill it */
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 12vh;
-
-  flex-wrap: nowrap; /* prevent wrapping on large screens */
-  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
   width: 100%;
 }
-
 #logo-img {
-  width: 190px;
-  height: 100px; /* keeps aspect ratio */
-}
-.nav-center {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: 1rem; /* 👈 You can tweak this value */
+  width: clamp(80px, 14vw, 220px);
+  height: auto; /* keeps aspect ratio */
+  /* margin-bottom: 1rem; */
 }
 
 .nav__list {
   display: flex;
-  gap: 2rem;
+  gap: clamp(0.5rem, 2vw, 2.5rem);
   list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-top: 1.4rem;
 }
 
 .nav__link {
   color: brown;
   text-decoration: none;
-  font-size: 1.4rem;
-  font-family: 'Space Grotesk', sans-serif;
-  /* margin-left: 1rem; */
+  font-size: clamp(0.9rem, 2vw, 1.4rem);
 }
 
 .log-in {
-  margin-left: auto; /* 👈 this is the magic that pushes it right */
   display: flex;
   align-items: center;
-  /* padding-right: 1rem; */
-  margin-right: 0%;
 }
 
 .login-button {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(0.4rem, 1.5vw, 1.3rem);
   color: antiquewhite;
   background-color: brown;
   border: 3px solid brown;
   border-radius: 1rem;
-  padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  min-width: 120px; /* Optional: enforce a minimum width */
-  min-height: 50px;
-}
 
+  height: clamp(20px, 5vw, 55px);
+
+  min-width: clamp(40px, 8vw, 120px);
+}
 .login-button:hover {
   background-color: brown;
   color: antiquewhite;
@@ -165,131 +129,131 @@ header {
 
 /*///////////////////////////////////// Search Bar Input */
 .search-bar-wrapper {
-  flex: 1 1 30%; /* instead of 100% */
+  flex: 1 1 auto; /* allow it to shrink and grow */
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
 }
 
-.search-bar-container {
+/* .search-bar-container {
   display: flex;
   align-items: center;
-  height: 3rem;
-  width: 100%;
-  max-width: 400px;
+  height: clamp(15px, 2.5vh, 3rem);
+  width: clamp(100px, 30vw, 400px);
   padding: 0 0.4rem;
   border: 3px solid brown;
   border-radius: 1rem;
   background-color: antiquewhite;
-  margin-left: 1rem;
-  margin-top: 0.57rem;
-}
+  align-self: center;
+} */
 
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  height: clamp(22px, 2.5vw, 120px);
+
+  width: clamp(120px, 30vw, 450px);
+  padding: 0 0.8rem;
+  border: 3px solid brown;
+  border-radius: 1rem;
+  background-color: antiquewhite;
+  align-self: center;
+}
+/* #search-input {
+  height: clamp(1vh, 4vh, 4vh);
+  width: clamp(200px, 30vw, 400px);
+} */
 /* .search-bar-container.hidden {
   display: none;
 } */
 
 #search-input {
   flex: 1;
+  height: 100%;
+  max-width: 100%;
   border: none;
   outline: none;
   background-color: transparent;
   color: brown;
-  font-size: 1.1rem;
+  font-size: clamp(12px, 1.5vw, 1.1rem);
   font-family: 'Space Grotesk', sans-serif;
-  height: 100%;
-  padding: 0;
   text-align: center;
-  justify-content: center;
+
+  /* Important to prevent spillover in <input> */
+  padding: 0 0.2rem;
+  box-sizing: border-box;
 }
-/*/////////////////////////////// The Homepage View */
-.homepage-container {
+/* /////////////////////////////// The Homepage View /////////////////////////// */
+.welcome-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   margin: 0 auto;
   padding: 0 2rem;
-  height: 60vh;
-
-  flex-wrap: nowrap; /* prevent wrapping on large screens */
-  gap: 1rem;
-  width: 100%;
-  font-family: 'Space Grotesk', sans-serif;
-  color: brown;
-  max-width: 800px;
+  height: 30vh;
+  gap: 0.5rem; /* Reduced from 1rem to decrease gap between text */
+  width: 80%;
+  /* max-width: 1000px; */
 }
 
-.home-paragraph {
-  margin-top: 4rem;
-  display: flex;
-  flex-direction: column;
-}
 .welcome-text {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2; /* Tighter line spacing */
+  text-align: center;
+  /* margin-top: -4rem; */
 }
 
 .content-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
-  /* margin-bottom: 3rem; */
+  height: 10vh;
+  width: 100%;
+  /* margin-top:rem; */
+  /* margin-bottom: -2rem; Remove any default margins */
 }
 
 .home-paragraph-1,
 .home-paragraph-2,
 .home-paragraph-3 {
   flex: 1;
-}
-
-.container-homepage-image1 {
-  align-items: end;
-}
-
-.welcome-img1,
-.welcome-img2,
-.welcome-img3 {
-  height: 200px;
-  width: auto;
-}
-.home-paragraph-1 {
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
   text-align: start;
+  align-self: flex-start;
 }
-.container-homepage-image1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 1rem;
+
+.home-paragraph-1,
+.home-paragraph-2,
+.home-paragraph-3 {
+  align-self: flex-start; /* Align text blocks to top */
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  flex: 1;
 }
+
+.container-homepage-image1,
+.container-homepage-image2,
+.container-homepage-image3 {
+  align-self: flex-end; /* Align image containers to bottom */
+}
+
 .welcome-img1 {
-  height: 250px;
+  height: 10vh;
   width: auto;
-  align-items: end;
-}
-
-.home-paragraph-2 {
-  text-align: start;
-  max-width: 68%;
-}
-.container-homepage-image2 {
-  align-items: center;
 }
 .welcome-img2 {
-  height: 250px;
+  height: 10vh;
   width: auto;
-}
-.home-paragraph-3 {
-  /* width: 100%; */
-  text-align: center;
-  align-items: flex-start;
-}
-
-.container-homepage-image3 {
-  align-items: end;
 }
 .welcome-img3 {
-  height: 200px;
+  height: 8vh;
   width: auto;
 }
+
 .homepage-View.hidden {
   display: none;
 }
@@ -514,3 +478,5 @@ img {
   flex: 1;
   height: 73.5vh;
 }
+
+/* ////////////////////////////////////////////////////////////////////// */
