@@ -19,6 +19,7 @@ body {
   max-width: 1200px; /* or whatever width you prefer */
   margin: 0 auto; /* centers the container */
   width: 100%; /* allows it to be responsive on smaller screens */
+  background-color: antiquewhite;
 }
 
 .homepage-container {
@@ -41,6 +42,7 @@ main {
   min-height: calc(100vh - 12vh - 4rem);
   padding: 2rem;
   box-sizing: border-box;
+  background-color: antiquewhite;
 }
 
 .hidden {
@@ -192,6 +194,8 @@ header {
   height: 30vh;
   gap: 0.5rem; /* Reduced from 1rem to decrease gap between text */
   width: 80%;
+  background-color: antiquewhite;
+
   /* max-width: 1000px; */
 }
 
