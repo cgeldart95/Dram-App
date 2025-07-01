@@ -16,7 +16,7 @@
         <header>
           <div class="header-container">
            <div class="logo-container">       
-            <a href="https://dramreviewsite.netlify.app/" class="nav__link homepage" data-view="homepage">
+            <a href="#home-view" class="nav__link homepage " data-view="homepage">
               <img src="img/dram-logo-3.png" class="logo-img" id="logo-img">
             </a>
           </div>
@@ -26,19 +26,19 @@
           <div class="nav-container">
             <ul class="nav__list">
               <li>
-                 <a href="#" class="nav__link" data-view="review">Diary</a>
+                 <a href="#diary-view" class="nav__link" data-view="review">Diary</a>
               </li>
               <li>
-                <a href="#" class="nav__link stash" data-view="stash">Stash</a>
+                <a href="#stash-view" class="nav__link stash" data-view="stash">Stash</a>
               </li>
               <li>
-                <a href="#" class="nav__link" data-view="wishlist">Wishlist</a>
+                <a href="#wishlist-view" class="nav__link" data-view="wishlist">Wishlist</a>
               </li>
             </ul>
           </div>
 
           <div class="log-in">
-            <button class="login-button">Login</button>
+            <button class="login-button ">Login</button>
           </div>
         </div>
        
@@ -46,8 +46,28 @@
 
 <!--////////////// Sections are the views we will be toggling between //////////// -->
     <main>
+      <div id="login-signup-modal-container">
+        <div id="login-modal" class="modal hidden">
+          <div class="modal-tabs">
+            <button type="button" id="login-button">Login</button>
+            <button type="button" id="new-signup-button">Sign Up</button>
+          </div>
+          <div id="login-form" class="form-section"> 
+            <form>                  
+              <input type="email" id="email">
+              <input type="password" id="password">
+            </form>
+          </div>
+            <div id="signup-form" class="form-section"> 
+            <form>                  
+              <input type="email" id="email">
+              <input type="password" id="password">
+            </form>
+          </div>
+        </div>
+     
       <!--///////////////////////////////////////////// Home View -->
-      <section id="home-view" class="view">
+      <section id="home-view" class="home-view view">
         <div class="welcome-container">
           <div class="content-row" id="welcome-row-1">
              <div class="home-paragraph-1">
@@ -57,7 +77,7 @@
               <img src="img/dram-whisky-bottle.png" class="welcome-img1" />
             </div>
           </div>
-          
+
           <div class="content-row" id="welcome-row-2">
             <div class="container-homepage-image2">
               <img src="img/glass-2.png" class="welcome-img2" />
@@ -77,7 +97,7 @@
             </div>
           </div>
         </div>
-      </div>
+      
       
       <div class="homepage-content-container"></div>
       
@@ -86,66 +106,77 @@
 
 <!-- ////////////////////////////////////////   Search Results View -->
    <!-- Search Results View -->
-  <section class="search-results-view view hidden">
-    
-    <!-- Results Container -->
-    <div class="results-container">
-      <aside class="sidebar-wrapper"> 
-        <p id="results-heading">Results for "Whisky"</p>
-      </aside>
-      <aside class="results-wrapper"> 
-        <ul class="results-list"></ul>
-      </aside>
-    </div>
+<section id="search-results-view" class="search-results-view view hidden">
+  
+  <!-- Sticky Heading -->
+  <div class="results-heading-container">
+    <p id="results-heading">Results for "Whisky"</p>
+  </div>
 
-    <!-- ///////////////// -->
-    <!-- Sidebar Filters -->
-    <div id="filters-sidebar" class="sidebar" aria-label="Product Filters">
+  <!-- Main Page Layout: Sidebar + Results -->
+  <div class="results-page-container">
+
+    <!-- Sticky Sidebar -->
+    <aside id="filters-sidebar" class="sidebar-container" aria-label="Product Filters">
       <p class="filter-title" id="filter-title">Filter Results</p>
+
       <div class="distillery-container">
         <select id="distillery-select" name="distillery">
           <option value="">Distillery</option>
           <option value="ardbeg">Ardbeg</option>
           <option value="lagavulin">Lagavulin</option>
           <option value="macallan">Macallan</option>
-          <!-- more options -->
         </select>
       </div>
+
       <div class="bottling-container">
         <button id="distillery-bottling-btn">Distillery Bottling</button>
         <button id="independent-bottling-btn">Independent Bottling</button>
       </div>
+
       <div class="malt-container">
         <button id="single-malt-btn">Single Malt</button>
         <button id="blended-malt-btn">Blended Malt</button>
         <button id="blend-btn">Blend</button>
         <button id="grain-whisky-btn">Grain Whisky</button>
       </div>
+
       <div class="age-statement-container">
         <select id="age-select" name="Age-Statement">
           <option value="">Age Statement</option>
+          <option value="10">10</option>
           <option value="12">12</option>
           <option value="15">15</option>
-          <option value="10">10</option>
-          <!-- more options -->
         </select>
       </div>
+
       <div class="strength-container">
         <button id="standard-strength-btn">Standard Strength</button>
         <button id="integrity-strength-btn">Integrity Strength</button>
         <button id="cask-strength-btn">Cask Strength</button>
       </div>
+
       <div class="non-chill-filtered-container">
         <button id="non-chill-filtered-btn">Non-Chill-Filtered</button>
       </div>
+
       <div class="natural-colour-container">
         <button id="natural-colour-btn">Natural Colour</button>
       </div>
-    </div>
+    </aside>
 
-  </section>
+    <!-- Results Section -->
+    <section id="results-view" class="results-container">
+      <ul class="results-list">
+        <!-- JS-generated results go here -->
+      </ul>
+    </section>
+
+  </div>
+</section>
+
   <!-- ///////////////////////////////////////////////////////////////// !-- Whisky Detail View --> 
-  <section id="whisky-detail" class="whisky-view hidden">
+  <section id="whisky-view" class="whisky-view hidden">
     <button id="back-to-results">
             ← Back to Results
           </button>
@@ -162,21 +193,21 @@
         </div>
      
       <!-- Wishlist View -->
-      <section id="wishlist" class="view hidden">
+      <section id="wishlist" class="wishlist-view hidden">
         <h2>Your Wishlist</h2>
         <!-- List of whiskies user saved -->
       </section>
 
       <!-- Account View -->
       <section
-        id="account"
+        id="account-view"
         class="account-view hidden"
       >
         <h2>Your Account</h2>
         <!-- User info, collections, reviews -->
       </section>
       <!-- Log in View -->
-      <section class="login-View hidden">
+      <section class="login-view hidden">
         <div></div>
       </section>
     </main>

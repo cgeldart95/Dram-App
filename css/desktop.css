@@ -43,14 +43,14 @@ html {
 
 main {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: antiquewhite;
 }
 
 .view {
   width: 100%;
   max-width: 1200px;
-  min-height: calc(100vh - 12vh - 4rem);
+  /* min-height: calc(100vh - 12vh - 4rem); */
   padding: 2rem;
   box-sizing: border-box;
   background-color: antiquewhite;
@@ -120,12 +120,13 @@ header {
 .log-in {
   display: flex;
   align-items: center;
+  background-color: brown;
 }
 
 .login-button {
   font-size: clamp(0.4rem, 1.5vw, 1.3rem);
   color: antiquewhite;
-  background-color: brown;
+  background-color: brown !important;
   border: 3px solid brown;
   border-radius: 1rem;
   cursor: pointer;
@@ -147,22 +148,10 @@ header {
   justify-content: center;
 }
 
-/* .search-bar-container {
-  display: flex;
-  align-items: center;
-  height: clamp(15px, 2.5vh, 3rem);
-  width: clamp(100px, 30vw, 400px);
-  padding: 0 0.4rem;
-  border: 3px solid brown;
-  border-radius: 1rem;
-  background-color: antiquewhite;
-  align-self: center;
-} */
-
 .search-bar-container {
   display: flex;
   align-items: center;
-  height: clamp(22px, 2.5vw, 120px);
+  height: clamp(30px, 2.4vw, 60px);
 
   width: clamp(120px, 30vw, 450px);
   padding: 0 0.8rem;
@@ -275,223 +264,113 @@ header {
 
 /*//////////////////////////////////////////////// The Search Results View */
 
-@media (max-width: 768px) {
-  .search-results-view {
-    flex-direction: column;
-    padding: 1rem;
-  }
-}
-
-/* ///////////////////////////////// Filter Sidebar */
-
 .search-results-view {
   display: flex;
-  align-items: flex-start;
-  margin: 0 auto;
-  padding: 0 2rem;
-  gap: 2rem;
-  min-height: 100vh;
-  position: relative;
+  flex-direction: column;
   width: 100%;
   background-color: antiquewhite;
-  /* max-width: 1200px; */
+}
+.results-page-container {
+  display: flex;
+  max-width: 1000px;
+  /* height: 100vh; */
 }
 
-/* Sidebar - position it relative to the centered container */
-.filters-sidebar {
-  position: fixed;
-  top: 12vh; /* Stick below header */
-  /* Calculate the right position based on the centered container */
-  right: calc(
-    50% - 725px + 2rem
-  ); /* 50% - (max-width/2) + padding */
-  width: 15rem;
-  max-height: calc(100vh - 12vh - 2rem);
-  overflow-y: auto;
+.results-heading-container {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 1rem;
+  background-color: antiquewhite;
+  border-bottom: 2px solid brown;
+  text-align: center;
+}
+#results-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
   color: brown;
-  z-index: 1;
-  /* padding-left: 1rem; */
+}
+/* ========== Sidebar ========== */
+.sidebar-container {
+  position: sticky;
+  top: 6rem; /* adjust based on your header height */
+  width: 15rem;
+  height: fit-content;
+  align-self: flex-start;
+  background-color: #f8f0e3;
+  border: 2px solid brown;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
-.filters-sidebar div,
-.filters-sidebar select,
-.filters-sidebar button,
-.filters-sidebar p {
+.sidebar-container * {
   margin-top: 0.7rem;
-}
-.filters-sidebar button,
-.filters-sidebar select {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
   color: brown;
   background: none;
   border: none;
-  /* padding: 0.2rem 0.23; */
+  cursor: pointer;
 }
 
 #filter-title {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.1rem;
-  margin-bottom: 1rem; /* space BELOW the underline */
-  padding-bottom: 0.3rem; /* space BETWEEN text and underline */
-  border-bottom: 2px solid brown; /* thickness and color of underline */
-  display: inline-block; /* ensures border only spans text width */
-}
-
-#distillery-select {
-  padding: 0;
   margin-bottom: 1rem;
-  cursor: pointer;
-  appearance: none; /* Standard */
-  -webkit-appearance: none; /* Safari */
-  -moz-appearance: none; /* Firefox */
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid brown;
+  display: inline-block;
 }
 
-#bottling-container {
-  margin: 1rem auto 1rem auto;
-  font-family: 'Space Grotesk', sans-serif;
-}
-
-#distillery-bottling-btn,
-#independent-bottling-btn {
-  display: block; /* each button takes full width and stacks */
-  margin-bottom: 1rem; /* optional spacing */
-  cursor: pointer;
-}
-
-#distillery-bottling-btn {
-  padding: 0;
-  margin-bottom: 0rem;
-  cursor: pointer;
-}
-#independent-bottling-btn {
-  border: none;
-  padding: 0;
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   margin-bottom: 1rem;
+  padding: 0;
   cursor: pointer;
 }
 
-/* //////// Malt Container */
-
-.malt-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-#single-malt-btn {
-  padding: 0;
-  margin-bottom: 0rem;
-  cursor: pointer;
-}
-
-#blended-malt-btn {
-  padding: 0;
-  margin-bottom: 0rem;
-  cursor: pointer;
-}
-#blend-btn {
-  padding: 0;
-  margin-bottom: 0rem;
-  cursor: pointer;
-}
-
-#grain-whisky-btn {
-  padding: 0;
-  cursor: pointer;
+/* ========== Filter Sections ========== */
+.bottling-container button,
+.malt-container button,
+.strength-container button,
+#non-chill-filtered-btn,
+#natural-colour-btn {
+  display: block;
   margin-bottom: 1rem;
 }
 
-img {
-  width: auto;
-  height: auto;
-  max-width: 400px;
-  max-height: 800px;
-}
-/* ///////////////////////////////////// */
-
-#age-select {
-  padding: 0;
-  cursor: pointer;
-  appearance: none; /* Standard */
-  -webkit-appearance: none; /* Safari */
-  -moz-appearance: none; /* Firefox */
-  margin-bottom: 1rem;
-}
-
-/* ////////////////// Strength container */
+.malt-container,
 .strength-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-#cask-strength-btn {
-  margin-bottom: 1rem;
-}
-
-#non-chill-filtered-btn {
-  margin-bottom: 0rem;
-}
-#natural-colour-btn {
-  margin-top: 0rem;
-}
-
-/* ////////////////  results container ///////// */
-
-/* Keep results heading sticky within its container */
-/* Results container - keep it scrollable */
-
+/* ========== Results ========== */
 .results-container {
-  min-height: auto;
-  margin-right: 0;
-  padding: 2rem;
-  max-width: 850px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: 15rem;
+  flex: 1;
+  min-width: 0;
+  background-color: white;
   border: 2px solid brown;
-}
-
-#results-heading {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.1rem;
   padding: 1rem;
-  /* border-bottom: 2px solid brown; */
-  display: flex;
-  justify-content: center;
-  color: brown;
-  text-align: center;
-  position: fixed;
-  top: 12vh;
-  /* Center it the same way as results-container */
-  left: 50%;
-  transform: translateX(-61.4%);
-  max-width: 850px; /* Same as results-container */
-  width: calc(
-    100% - 17rem
-  ); /* Account for sidebar + some padding */
-
-  background-color: antiquewhite;
-  z-index: 100;
-  /* border-top-left-radius: calc(1rem - 2px); */
-  /* border-top-right-radius: calc(1rem - 2px); */
-  box-sizing: border-box;
+  border-radius: 0.5rem;
 }
 
-img {
-  width: 100%;
-  height: auto; /* keep aspect ratio */
-  max-height: 80vh; /* or something smaller */
-}
 .results-list {
   list-style: none;
   padding: 1rem;
-  padding-top: calc(
-    12vh + 3rem
-  ); /* 3rem for buffer below heading */
+  /* padding-top: calc(12vh + 3rem); */
   margin: 0;
+  /* height: 73.5vh; */
   flex: 1;
-  height: 73.5vh;
+}
+
+/* ========== Images ========== */
+img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
 }
 
 /* ////////////////////////////////////////////////////////////////////// */

@@ -1,0 +1,1 @@
+const loginTab = (document.getElementById = '');
