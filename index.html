@@ -38,7 +38,7 @@
           </div>
 
           <div class="log-in">
-            <button class="login-button ">Login</button>
+            <button id="login-button" class="login-button ">Login</button>
           </div>
         </div>
        
@@ -46,26 +46,36 @@
 
 <!--////////////// Sections are the views we will be toggling between //////////// -->
     <main>
-      <div id="login-signup-modal-container">
-        <div id="login-modal" class="modal hidden">
-          <div class="modal-tabs">
-            <button type="button" id="login-button">Login</button>
-            <button type="button" id="new-signup-button">Sign Up</button>
-          </div>
-          <div id="login-form" class="form-section"> 
-            <form>                  
-              <input type="email" id="email">
-              <input type="password" id="password">
+      <div class="modal hidden" id="login-modal">
+        <div class="modal-content">
+        <span class="close" id="close-login-modal">&times;</span>
+        <h2>Login</h2>
+        <form>
+                <label for="login-username">Username:</label>
+                <input class="auth__input" type="text" id="login-username" name="username" required autocomplete="username">
+                <label for="login-password">Password:</label>
+                <input class="auth__input" type="password" id="login-password" name="password" required autocomplete="current-password">
+                <button class="auth__button" type="submit">Login</button>
+                <button id="login-signup-button" class="auth__button" type="button">Don't have an account? Sign Up</button>
             </form>
-          </div>
-            <div id="signup-form" class="form-section"> 
-            <form>                  
-              <input type="email" id="email">
-              <input type="password" id="password">
-            </form>
-          </div>
         </div>
+      </div>
      
+    <div class="modal hidden" id="signup-modal">
+        <div class="modal-content">
+        <span class="close" id="close-signup-modal">&times;</span>
+        <h2>Sign Up</h2>
+        <form>
+                <label for="signup-username">Username:</label>
+                <input class="auth__input" type="text" id="signup-username" name="username" required autocomplete="username">
+                <label for="signup-password">Password:</label>
+                <input class="auth__input" type="password" id="signup-password" name="password" required autocomplete="current-password">
+                <button class="auth__button" type="submit">Sign Up</button>
+                <button id="signupBackToLoginBtn" class="auth__button" type="submit">Back to Login Page</button>
+
+            </form>
+        </div>
+      </div>
       <!--///////////////////////////////////////////// Home View -->
       <section id="home-view" class="home-view view">
         <div class="welcome-container">
@@ -206,14 +216,11 @@
         <h2>Your Account</h2>
         <!-- User info, collections, reviews -->
       </section>
-      <!-- Log in View -->
-      <section class="login-view hidden">
-        <div></div>
-      </section>
+     
     </main>
-    <script type="module" src="js/controller.js" defer></script>
     <footer> <p>&copy; 2025 Dram App. All rights reserved.</p> </footer>
     
   </div>
+  <script type="module" src="js/controller.js" defer></script>
   </body>
 </html>

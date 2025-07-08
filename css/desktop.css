@@ -160,13 +160,6 @@ header {
   background-color: antiquewhite;
   align-self: center;
 }
-/* #search-input {
-  height: clamp(1vh, 4vh, 4vh);
-  width: clamp(200px, 30vw, 400px);
-} */
-/* .search-bar-container.hidden {
-  display: none;
-} */
 
 #search-input {
   flex: 1;
@@ -184,6 +177,100 @@ header {
   padding: 0 0.2rem;
   box-sizing: border-box;
 }
+
+/* ////////////////////////////////// Login Modal ////////////////////////////////////////*/
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: brown; /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+  position: absolute; /* Position relative to the modal */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Adjust for the width and height of the modal */
+  background-color: antiquewhite; /* White background */
+  padding: 20px;
+  border: 1px solid brown;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px; /* Maximum width */
+  border-radius: 8px; /* Rounded corners */
+  font-family: 'Space Grotesk', sans-serif;
+
+  /* box-shadow: 0 4px 8px brown; Optional shadow for depth */
+}
+
+/* Close button */
+.close {
+  color: brown;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  /* color: black; */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Optional: Style the form elements */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+}
+
+.auth__input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid brown;
+  border-radius: 4px;
+  background-color: antiquewhite; /* Set the desired background color */
+  color: black; /* Set the text color */
+}
+
+/* Focus styles */
+.auth__input:focus {
+  outline: none; /* Remove default outline */
+  border-color: darkbrown; /* Change border color on focus */
+  background-color: antiquewhite; /* Ensure background stays white on focus */
+}
+
+/* Autofill styles */
+.auth__input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px antiquewhite inset; /* Set the background color */
+  box-shadow: 0 0 0 1000px antiquewhite inset; /* Set the background color */
+  transition: background-color 5000s ease-in-out 0s; /* Prevent color change */
+}
+
+.auth__button {
+  padding: 10px;
+  background-color: brown; /* Green */
+  color: brown;
+  border: 1px brown;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: brown; /* Darker green */
+}
+
 /* /////////////////////////////// The Homepage View /////////////////////////// */
 .welcome-container {
   display: flex;
@@ -262,7 +349,7 @@ header {
   display: none;
 }
 
-/*//////////////////////////////////////////////// The Search Results View */
+/*//////////////////////////////////////////////// The Search Results View ///////////////////////////////*/
 
 .search-results-view {
   display: flex;
@@ -374,3 +461,7 @@ img {
 }
 
 /* ////////////////////////////////////////////////////////////////////// */
+
+.hidden {
+  display: none; /* or visibility: hidden; */
+}
