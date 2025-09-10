@@ -1,0 +1,74 @@
+.
+├── css
+│   ├── desktop.css
+│   └── mobile.css
+├── dist
+│   ├── Barrel.d29c39f5.png
+│   ├── Dram-App.774bf975.css
+│   ├── Dram-App.774bf975.css.map
+│   ├── Dram-App.e438c7cc.js
+│   ├── Dram-App.e438c7cc.js.map
+│   ├── Dram-App.e7c9e090.js
+│   ├── Dram-App.e7c9e090.js.map
+│   ├── dram-logo-3.a0702976.png
+│   ├── dram-whisky-bottle.b175f5f8.png
+│   ├── glass-2.917e2f84.png
+│   └── index.html
+├── distilleries.json
+├── dram-app
+│   ├── index.js
+│   ├── package-lock.json
+│   └── package.json
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
+├── functions
+│   ├── index.js
+│   ├── package-lock.json
+│   └── package.json
+├── img
+│   ├── ardna10.jpg
+│   ├── bad logpo.png
+│   ├── Barrel.png
+│   ├── dram bottle.png
+│   ├── Dram Cork.png
+│   ├── Dram logo -1.png
+│   ├── Dram Logo -2.png
+│   ├── Dram Logo -4.png
+│   ├── Dram logo 1.png
+│   ├── Dram Logo 2.png
+│   ├── Dram logo-2.png
+│   ├── Dram logo-4.png
+│   ├── Dram logo-5.png
+│   ├── Dram logo-6.png
+│   ├── dram-logo-3.png
+│   ├── dram-whisky-bottle.png
+│   ├── FY22_Global_Craigellachie_IPX_700ML_17YO.png
+│   ├── glass-2.png
+│   ├── Glen_Cairn 2.png
+│   ├── Glen_Cairn.png
+│   ├── HED47173.JPG.webp
+│   ├── ledaig-10-years-whisky-5029704217434-39186258854140_1080x.webp
+│   └── thompson bros lowrie.jpg
+├── index.html
+├── js
+│   ├── controllers
+│   │   ├── authController.js
+│   │   └── controller.js
+│   ├── firebase.js
+│   ├── model.js
+│   └── views
+│       ├── authView.js
+│       ├── diaryView.js
+│       ├── filterView.js
+│       ├── homeView.js
+│       ├── resultsView.js
+│       ├── searchView.js
+│       ├── stashView.js
+│       └── view.js
+├── package-lock.json
+├── package.json
+├── pglite-debug.log
+└── structure.txt
+
+9 directories, 63 files

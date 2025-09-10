@@ -251,6 +251,11 @@ label {
   background-color: antiquewhite; /* Ensure background stays white on focus */
 }
 
+input.auth__input::placeholder {
+  color: #888; /* Change the color of the placeholder text */
+  font-style: italic; /* Make it italic */
+}
+
 /* Autofill styles */
 .auth__input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px antiquewhite inset; /* Set the background color */
@@ -271,6 +276,9 @@ button:hover {
   background-color: brown; /* Darker green */
 }
 
+.requirements {
+  font-size: 0.75rem;
+}
 /* /////////////////////////////// The Homepage View /////////////////////////// */
 .welcome-container {
   display: flex;

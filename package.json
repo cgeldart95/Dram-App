@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "buffer": "^6.0.3",
     "parcel": "^2.15.2"
+  },
+  "dependencies": {
+    "firebase": "^11.10.0",
+    "uuid": "^11.1.0"
   }
 }
